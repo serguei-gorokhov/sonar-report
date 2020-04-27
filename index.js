@@ -154,7 +154,7 @@ if (data.sinceLeakPeriod) {
   do {
     const res = request(
       "GET",
-      `${sonarBaseURL}/api/rules/search?activation=true&ps=${pageSize}&p=${page}${filterRule}`,
+      `${sonarBaseURL}/api/rules/search?activation=true&ps=${pageSize}&p=${page}${filterRule}${withOrganization}`,
       options
     );
     page++;
